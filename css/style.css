@@ -11,6 +11,8 @@
 
 /* Personalization */
 
+
+
 *{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -24,13 +26,16 @@ h1 {
     font-weight: 900;
     color: #eff3ff;
     font-size: xxx-large;
-    padding-bottom: 1rem;
+    padding-top: 1.2rem;
+    padding-bottom: .5rem;
+    text-align: center;
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 1rem;
     padding-bottom: 2rem;
     font-style: italic;
+    /* color: var(--brandcolor); */
 }
 
 body {
@@ -61,11 +66,11 @@ header::before {
     right: 0;
     bottom: 0;
     background-image: inherit; /* Use the same background image */
-
+    background-color: rgba(0, 0, 0, 0.519); /* Semi-transparent black for darkening */
     background-position: initial;
     filter: blur(7px); /* Apply blur effect */
     z-index: -1; /* Keep the blurred background behind content */
-    opacity: 1; /* Optionally, reduce opacity for a darkening effect */
+    opacity: 3; /* Optionally, reduce opacity for a darkening effect */
   }
   
 
@@ -80,14 +85,29 @@ p {
 
 }
 
+.home-btn{
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Distance from the top of the page */
+    left: 10px; /* Distance from the right edge of the page */
+    z-index: 1000; /* Ensure it stays above other content */
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1b4f6f;;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
 a {
-    color: #7699f2;
-    text-decoration: none;
+    color: #1b4f6f;;
+    text-decoration: dotted;
 }
 
 .learnmore{
 font-weight: 700;
-color: #ffffff;
+color: hsl(0, 0%, 100%);
 }
 
 
@@ -105,15 +125,15 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #708aef;
-    color: white;
+    background-color: #1b4f6f;;
+    color: hsl(0, 0%, 100%);
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #204b8f;
+    background-color: cyan;
 }
 
 /* Results Section Styling - Tables */
@@ -133,10 +153,20 @@ table {
     background-color: white;
 }
 
+
 #athlete-results {
     max-height: 100vh;
     overflow-y: scroll;
     position: relative;
+}
+
+#athlete-results table th {
+    position: sticky;
+    top: 0; 
+    background-color: #333; 
+    z-index: 2; 
+    padding: 10px;
+
 }
 
 table th, table td {
@@ -187,8 +217,8 @@ footer {
 /* JavaScript Styling*/
 
 :root{
-    --brandcolor:rgb(124, 192, 255);
-    --darkmain:rgb(56, 71, 86);
+    --brandcolor:rgb(255, 255, 255);
+    --darkmain:#0f2c3e;;
     --darksecondary: rgb(29, 31, 34);
     --darktertiary: rgb(16, 17, 19);
     --lightgrey: rgb(228, 226, 226);
@@ -213,6 +243,6 @@ footer {
 }
 
 *:focus{
-    color: #681818;
+    color: skyblue;
 }
 

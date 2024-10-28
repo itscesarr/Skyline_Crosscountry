@@ -8,6 +8,7 @@ const nightmode_elements_div = document.getElementById("nightmain").querySelecto
 const nightmode_elements_div2 = document.getElementById("nightmain").querySelectorAll(".nightmode-div2");
 
 
+
 function nightmode(){
     
     
@@ -36,8 +37,13 @@ function nightmode(){
             nightmode_elements_div2[i].style.backgroundColor = "var(--darktertiary)";
             nightmode_elements_div2[i].style.border = "none";
         }
-        document.getElementById("nightmodebutton").innerHTML = "Good Morning!";
+        document.getElementById("nightmodebutton").innerHTML = "Light Mode!";
         document.getElementById("nightmain").style.backgroundColor = "var(--darkmain)";
+        document.getElementById("nightmodebutton").style.fontSize = "16px";
+        document.getElementById("nightmodebutton").style.fontWeight = "700";
+        document.getElementById("nightmodebutton").style.position = "absolute";
+        document.getElementById("nightmodebutton").style.top = "10px"; 
+        document.getElementById("nightmodebutton").style.right = "10px"; 
         toggle = true;
     }
 
@@ -48,7 +54,7 @@ function nightmode(){
                 nightmode_elements[i].style.color = "black";
             }
             for (var i = 0; i < nightmode_elements_white.length; i++){
-                nightmode_elements_white[i].style.color = "black";
+                nightmode_elements_white[i].style.color = "#1b4f6f";
             }
             for(var i = 0; i < nightmode_elements_switch.length; i++){
                 nightmode_elements_switch[i].style.color = "var(--brandcolor)";
@@ -60,8 +66,13 @@ function nightmode(){
             for(var i = 0; i < nightmode_elements_div2.length; i++){
                 nightmode_elements_div2[i].style.backgroundColor = "var(--lightgrey)";
             }
-            document.getElementById("nightmodebutton").innerHTML = "Good Night!"
+            document.getElementById("nightmodebutton").innerHTML = "Night Mode!"
             document.getElementById("nightmain").style.backgroundColor = "white";
+            document.getElementById("nightmodebutton").style.fontSize = "16px";
+            document.getElementById("nightmodebutton").style.fontWeight = "700";
+            document.getElementById("nightmodebutton").style.position = "absolute";
+            document.getElementById("nightmodebutton").style.top = "10px"; 
+            document.getElementById("nightmodebutton").style.right = "10px"; 
         }
    }
    toggle = false;
