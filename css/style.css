@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Fonts */
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Personalization */
+
+
+
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    margin: revert;
+ }
+
+
+h1 {
+    font-weight: 900;
+    color: #eff3ff;
+    font-size: xxx-large;
+    padding-top: 1.2rem;
+    padding-bottom: .5rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    font-style: italic;
+    /* color: var(--brandcolor); */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    position: relative;
+    background-image: url('../images/skyline.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    z-index: 1; /* Ensure content is above the background */
+  }
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Use the same background image */
+    background-color: rgba(0, 0, 0, 0.519); /* Semi-transparent black for darkening */
+    background-position: initial;
+    filter: blur(7px); /* Apply blur effect */
+    z-index: -1; /* Keep the blurred background behind content */
+    opacity: 3; /* Optionally, reduce opacity for a darkening effect */
+  }
+  
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+
+}
+
+.home-btn{
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Distance from the top of the page */
+    left: 10px; /* Distance from the right edge of the page */
+    z-index: 1000; /* Ensure it stays above other content */
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1b4f6f;;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    color: #1b4f6f;;
+    text-decoration: dotted;
+}
+
+.learnmore{
+font-weight: 700;
+color: hsl(0, 0%, 100%);
+}
+
+
+/* Navigation buttons */
+nav ul {
+    list-style: none;
+    padding-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1b4f6f;;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: cyan;
+}
+
+/* Results Section Styling - Tables */
+section {
+    margin: inherit;
+    width: auto;
+}
+
+section h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+
+#athlete-results {
+    max-height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
+#athlete-results table th {
+    position: sticky;
+    top: 0; 
+    background-color: #333; 
+    z-index: 2; 
+    padding: 10px;
+
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    max-height: 60vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Photo Gallery Styling */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    overflow: scroll;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* JavaScript Styling*/
+
+:root{
+    --brandcolor:rgb(255, 255, 255);
+    --darkmain:#0f2c3e;;
+    --darksecondary: rgb(29, 31, 34);
+    --darktertiary: rgb(16, 17, 19);
+    --lightgrey: rgb(228, 226, 226);
+}
+
+.nightmode-s{
+    color:var(--brandcolor);
+}
+
+.nightmode, .nightmode-w{
+    color:black;
+  
+}
+
+.nightmode-div{
+    background-color: white;
+    box-shadow: grey 4px 3px 10px;
+}
+
+.nightmode-div2{
+    background-color: var(--lightgrey);
+}
+
+.nightmode-btn{
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Distance from the top of the page */
+    right: 10px; /* Distance from the right edge of the page */
+    z-index: 1000; /* Ensure it stays above other content */
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+}
+.nightmode-btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: #0f2c3e;
+    transition: background-color 0.3s ease;
+
+}
+
+*:focus{
+    color: skyblue;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        width: 80%; /* Take up most of the screen width */
+        padding: 12px; /* Slightly larger padding for touch devices */
+        margin: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        width: auto; /* Take up most of the screen width */
+        padding: 12px; /* Slightly larger padding for touch devices */
+        margin: inherit;
+    }
+}
