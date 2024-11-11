@@ -87,6 +87,7 @@ p {
 
 }
 
+
 .home-btn{
     position: absolute; /* Use absolute positioning */
     top: 10px; /* Distance from the top of the page */
@@ -292,7 +293,14 @@ footer {
     color: skyblue;
 }
 
-@media (max-width: 600px) {
+
+/* media query */
+
+@media (min-width: 320px) {
+
+    .hover-button{
+        padding: 0px;
+    }
     nav ul {
         flex-direction: column; /* Stack buttons vertically */
         align-items: center;
@@ -300,13 +308,49 @@ footer {
     }
 
     nav ul li a {
-        width: 80%; /* Take up most of the screen width */
-        padding: 12px; /* Slightly larger padding for touch devices */
+        width: auto; /* Take up most of the screen width */
+        padding: 1px; /* Slightly larger padding for touch devices */
+        margin: inherit;
+    }
+
+}
+
+/* Styles for very small screens (320px and up) */
+@media (min-width: 425px) {
+    .hover-button {
+        padding: 0px; /* Minimal padding for small screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 5px; /* Spacing between items */
+    }
+
+    nav ul li a {
+        width: auto; /* Allows link to size based on content */
+        padding: 8px; /* Increased padding for better touch usability */
         margin: inherit;
     }
 }
 
-@media (max-width: 768px) {
+/* Styles for slightly larger small screens (425px and up) */
+@media (min-width: 699px) {
+    nav ul {
+        flex-direction: column; /* Continue stacking vertically */
+        align-items: center;
+        gap: 10px; /* More space between items for clarity */
+    }
+
+    nav ul li a {
+        width: 80%; /* Ensures links are centered but take up most width */
+        padding: 12px; /* Larger padding for easier tap */
+        margin: inherit;
+    }
+}
+
+
+@media (min-width: 700px) {
     nav ul {
         flex-direction: column; /* Stack buttons vertically */
         align-items: center;
@@ -319,7 +363,6 @@ footer {
         margin: inherit;
     }
 }
-
 
 .hover-button, .hover-card {
     margin: 20px;
