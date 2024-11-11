@@ -55,9 +55,11 @@ header {
     padding: 20px;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    background-color: #000000;
     z-index: 1; /* Ensure content is above the background */
-  }
+}
 
+/* Combine the header background properties into the ::before pseudo-element */
 header::before {
     content: '';
     position: absolute;
@@ -65,13 +67,13 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: inherit; /* Use the same background image */
-    background-color: rgba(0, 0, 0, 0.519); /* Semi-transparent black for darkening */
-    background-position: initial;
-    filter: blur(7px); /* Apply blur effect */
-    z-index: -1; /* Keep the blurred background behind content */
-    opacity: 3; /* Optionally, reduce opacity for a darkening effect */
-  }
+    background: inherit; /* Inherit background properties from header */
+    filter: blur(7px); /* Apply a blur effect */
+    background-color: rgba(0, 0, 0, 0.573); /* Semi-transparent black overlay */
+    z-index: -1; /* Keep the blurred background behind the content */
+}
+
+
   
 
 h1, h2 {
@@ -93,16 +95,25 @@ p {
 
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1b4f6f;;
     color: hsl(0, 0%, 100%);
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
+.home-btn:hover{
+    background-color: rgb(236, 245, 255);
+    color: #0f2c3e;
+}
+
+
 a {
-    color: #1b4f6f;;
     text-decoration: dotted;
+}
+
+.email{
+    color: #c7e9ff;
+    text-decoration: underline ;
 }
 
 .learnmore{
@@ -125,7 +136,7 @@ nav ul li {
 nav ul li a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1b4f6f;;
+    background-color: #74c5f7;
     color: hsl(0, 0%, 100%);
     border-radius: 5px;
     font-weight: bold;
@@ -133,8 +144,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: cyan;
+    background-color: rgb(236, 245, 255);
+    color: #221962;
 }
+
 
 /* Results Section Styling - Tables */
 section {
@@ -155,7 +168,7 @@ table {
 
 
 #athlete-results {
-    max-height: 100vh;
+    max-height: 80vh;
     overflow-y: scroll;
     position: relative;
 }
@@ -192,15 +205,26 @@ table tr:nth-child(even) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    max-width: 1200px; /* Limit gallery width */
     margin: 20px auto;
-    overflow: scroll;
+    padding: 10px;
+    overflow: hidden; /* Prevent horizontal scrolling */
 }
 
 #gallery img {
-    width: 100%;
+
+    width: 20%; /* Use the entire grid column width */
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
 }
+
+#gallery img:hover {
+    transform: scale(1.05); /* Slight zoom-in on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepen shadow on hover */
+}
+
 
 /* Footer Styling */
 footer {
@@ -295,3 +319,15 @@ footer {
         margin: inherit;
     }
 }
+
+
+.hover-button, .hover-card {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #1b4f6f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+

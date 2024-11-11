@@ -8,7 +8,6 @@ const nightmode_elements_div = document.getElementById("nightmain").querySelecto
 const nightmode_elements_div2 = document.getElementById("nightmain").querySelectorAll(".nightmode-div2");
 
 
-
 function nightmode(){
     
     
@@ -32,6 +31,7 @@ function nightmode(){
         for(var i = 0; i < nightmode_elements_div.length; i++){
             nightmode_elements_div[i].style.backgroundColor = "var(--darksecondary)";
             nightmode_elements_div[i].style.boxShadow = "none";
+            
         }
         for(var i = 0; i < nightmode_elements_div2.length; i++){
             nightmode_elements_div2[i].style.backgroundColor = "var(--darktertiary)";
@@ -77,3 +77,30 @@ function nightmode(){
    }
    toggle = false;
 }
+
+
+// Select elements for adding hover effects
+const hoverElements = document.querySelectorAll('.hover-button, .nightmode-card');
+
+// mouseover and mouseout listeners
+hoverElements.forEach(element => {
+    element.addEventListener('mouseover', () => {
+        // Change styles on hover
+        element.style.transform = 'scale(1.1)';
+        element.style.backgroundColor = '';
+    });
+
+    element.addEventListener('mouseout', () => {
+        // Reset styles when hover ends
+        element.style.transform = 'scale(1)';
+        element.style.backgroundColor = '#1b4f6f'; // Reverts to original
+    });
+});
+
+const title = document.getElementById('title');
+title.style.transform = 'translateX(-100vw)';
+title.style.transition = 'transform 1s ease';
+window.onload = () => {
+  title.style.transform = 'translateX(0)';
+};
+
